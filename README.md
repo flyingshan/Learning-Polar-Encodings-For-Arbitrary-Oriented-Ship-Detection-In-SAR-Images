@@ -7,8 +7,8 @@ Learning Polar Encodings for Arbitrary-Oriented Ship Detection in SAR Images
 Common horizontal bounding box (HBB)-based methods are not capable of accurately locating slender ship targets with arbitrary orientations in synthetic aperture radar (SAR) images. Therefore, in recent years, methods based on oriented bounding box (OBB) have gradually received attention from researchers. However, most of the recently proposed deep learning-based methods for OBB detection encounter the boundary discontinuity problem in angle or key point regression. In order to alleviate this problem, researchers propose to introduce some manually set parameters or extra network branches for distinguishing the boundary cases, which make training more difficult and lead to performance degradation. In this paper, in order to solve the boundary discontinuity problem in OBB regression, we propose to detect SAR ships by learning polar encodings. The encoding scheme uses a group of vectors pointing from the center of the ship target to the boundary points to represent an OBB. The boundary discontinuity problem is avoided by training and inference directly according to the polar encodings. In addition, we propose an Intersect over Union (IOU) -weighted regression loss, which further guides the training of polar encodings through the IOU metric and improves the detection performance. Experiments on the Rotating SAR Ship Detection Dataset (RSSDD) show that the proposed method can achieve better detection performance over other comparison algorithms and other OBB encoding schemes, demonstrating the effectiveness of our method.
 
 
-
 # Dependencies
+
 Ubuntu 18.04, Python 3.6.10, PyTorch 1.6.0, OpenCV-Python 4.3.0.36 
 
 # How to start
