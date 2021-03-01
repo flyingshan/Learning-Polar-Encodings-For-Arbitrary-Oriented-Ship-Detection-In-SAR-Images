@@ -1,4 +1,4 @@
-# Learning-Polar-Encodings
+# Polar-Encodings
 Learning Polar Encodings for Arbitrary-Oriented Ship Detection in SAR Images
 
 
@@ -8,8 +8,6 @@ Common horizontal bounding box (HBB)-based methods are not capable of accurately
 
 
 ```
-
-
 # Dependencies
 Ubuntu 18.04, Python 3.6.10, PyTorch 1.6.0, OpenCV-Python 4.3.0.36 
 
