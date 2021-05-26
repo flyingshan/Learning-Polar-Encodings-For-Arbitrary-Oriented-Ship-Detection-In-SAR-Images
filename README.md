@@ -15,22 +15,32 @@ Ubuntu 18.04, Python 3.6.10, PyTorch 1.6.0, OpenCV-Python 4.3.0.36
 
 # How to start
 
+## Place data
+
+The ssdd dataset can be placed and organized as:
+```
+data
+--ssdd
+----imageset(train/test txts, same as the VOC)
+----annotations(xml annotations of ssdd)
+----images(images from ssdd)
+```
 ## Train the model
 ```ruby
-python main.py --data_dir dataPath --epochs 150 --batch_size 8 --dataset ssdd --phase train
+python main.py --data_dir data/ssdd --num_epoch 120 --batch_size 8 --dataset ssdd --phase train
 ```
-
-## Test the model
-```ruby
-python main.py --data_dir dataPath --epochs 150 --batch_size 8 --dataset ssdd --phase test
-```
-
 
 ## Evaluate the model
 You may adjust the conf_thresh to get a better mAP
 ```ruby
-python main.py --data_dir dataPath --epochs 80 --conf_thresh 0.1 --batch_size 8 --dataset ssdd --phase eval
+python main.py --data_dir data/ssdd --batch_size 16 --dataset ssdd --resume MODEL_TO_EVALUATE.pth --phase eval
 ```
+
+## Draw results
+```ruby
+python main.py --data_dir data/ssdd --batch_size 16 --dataset ssdd --resume MODEL_TO_DRAW_RESULTS.pth --phase test
+```
+
 
 ## RSSDD Annotation
 Link：[BaiDuYun Disk](https://pan.baidu.com/s/18sCZ7-0hOzbc2N9aul9uBg )
