@@ -27,7 +27,7 @@ data
 ```
 ## Train the model
 ```ruby
-python main.py --data_dir data/ssdd --num_epoch 120 --batch_size 8 --dataset ssdd --phase train
+python main.py --data_dir data/ssdd --num_epoch 120 --batch_size 8 --dataset ssdd --phase train --K 100
 ```
 
 ## Evaluate the model
