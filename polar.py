@@ -503,6 +503,6 @@ class IoUWeightedSmoothL1Loss(nn.Module):
             
             return loss_reg, loss_iou
         else:
-            return 0.
+            return 0., 0.
 
 ###########-------IoU损失函数结束--------###########
